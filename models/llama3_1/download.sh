@@ -12,14 +12,16 @@
 
 set -e
 
-read -p "Enter the URL from email: " PRESIGNED_URL
+read -p "https://llama3-1.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoicGg5Y242ZGl6bzJ4ZmN2ajdpajRwbnFxIiwiUmVzb3VyY2UiOiJodHRwczpcL1wvbGxhbWEzLTEubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyMjY2NDY4Nn19fV19&Signature=ZyZ3ZlEYxvK3iOsvxl8n3inrVrBfaV-u-XMuo5wDscqF2OxiZ0QvPEiyar5GKQ3kVqHXxR6iqC0eg8aqJcLGezCthL%7EaZXNao0iw-TN2ApYFeN2pT9SvX4W67-ufNWReAQWeczurMuU5bmNl1oJS9eqE%7EBiRXnt0keg82-WeGJ9N0HxPCQcjfJAYiCYHEaki1v5VyO5mpxvHS2CGhheeiL9hYhyECbx000RZbL1ZmqZ4Pd8N4pfIMvpzTU2stdwwC-FG%7EmUbLdtt%7EZt8yCB2M6KOoUr4RuusS74HewyZsCylYVkik951M6yz7gPeiV2M%7EKtcUTddZZt3Bcch9uuRww__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=1495617397718704
+
+: " PRESIGNED_URL
 ALL_MODELS_LIST="meta-llama-3.1-405b,meta-llama-3.1-70b,meta-llama-3.1-8b,meta-llama-guard-3-8b,prompt-guard"
 printf "\n **** Model list ***\n"
 for MODEL in ${ALL_MODELS_LIST//,/ }
 do
     printf " -  ${MODEL}\n"
 done
-read -p "Choose the model to download: " SELECTED_MODEL
+read -p "8Billion: " SELECTED_MODEL
 printf "\n Selected model: ${SELECTED_MODEL} \n"
 
 SELECTED_MODELS=""
